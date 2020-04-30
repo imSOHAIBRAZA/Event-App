@@ -29,7 +29,7 @@ class EventsApi {
             'authorization' :  TOKEN
         };
         let response = await axios({
-            url: `${Base_Url}/events/${id}`,
+            url: `${Base_Url}/events/${id}/broadcasters`,
             method: "GET",
             headers: ajaxRequestHeaders,
             

@@ -51,24 +51,24 @@ class PropertyGridItem extends Component {
               </div>
               <div className="photo-description image-content" >
 
-                <div className="mb-2 clearfix d-flex align-items-center">
+                <div className=" clearfix d-flex align-items-center">
                   <div className="float-left  h-sm-72px">
                     <h5 className="place-head m-0 ">{title}</h5>
                   </div>
 
                 </div>
                 <div className="light-gray">
-                  <div className="pb-3">
+                  <div >
 
 
 
-                    <p className="m-0 d-inline-block fs-16"><strong>Date: </strong>{date}</p>
+                    <p className="m-0 d-inline-block fs-16" style={{color: '#f96716'}}><strong>{date}</strong></p>
                   </div>
                   <div className="clearfix">
                     <div className="float-left w-100 full-width">
                       <div className="mb-12">
                         <p className="fs-14 d-inline-block m-0 w-60" >
-                          <strong>Description</strong>
+                          {/* <strong>Description</strong> */}
                           </p><br/>
                         <p className="d-inline-block m-0 m-small">
                           {description}

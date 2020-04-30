@@ -1,13 +1,15 @@
 import React, { useEffect, Fragment } from 'react';
 import HeaderMenu from '../Header/HeaderMenu'
+import List from '../Views/List/List.js';
+
 
 const MarketplaceSpecs = (props) => {
 
 	
-
-	console.log('EVENT DETAILS++>',props.eventData[0])
 	
-	const {created_at,date,description,id,thumbnail,title} = props.eventData[0]
+	
+	const {created_at,date,description,id,thumbnail,title,all_broadcasts} = props.eventData.data[0]
+	console.log('BRODCAST DETAILS::>',all_broadcasts)
 	// created_at: "2019-12-12 14:48:50"
 	// date: "2019-12-17 05:00:00"
 	// deleted_at: null
@@ -224,6 +226,7 @@ const MarketplaceSpecs = (props) => {
 								<i className="fa fa-commenting-o d-inline-block" aria-hidden="true"></i>
 							</div>
 						</div> */}
+						<List data={all_broadcasts}/>
 					</div>
 				</div>
 			</div>
