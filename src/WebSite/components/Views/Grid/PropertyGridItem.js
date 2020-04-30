@@ -24,7 +24,7 @@ class PropertyGridItem extends Component {
     // updated_at: "2019-12-11 11:09:43
     return (
       <>
-        <div id={id} className="col-xl-3 col-lg-3 col-md-4 col-sm-12 pt-3 zero-padding"  >
+        <div id={id} className="col-xl-3 col-lg-3 col-md-4 col-sm-12 pt-3 zero-padding" style={{zIndex: 0}} >
           <Link to={`/event-detail/${id}`}>
 
             <div className="frame position-relative" style={{boxShadow: 'darkgrey 0px 0px 7px'}}>

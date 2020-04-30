@@ -1,9 +1,22 @@
-import React from "react";
-import DatePicker from 'react-datepicker';
+import React, { useState, useEffect, Fragment } from "react";
+import { DateRangePicker } from 'react-dates';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import moment from 'moment';
 
 const Search = props => {
  
+  const [eventType, setEventType] = useState('');
+  const [startDate, setStartDate] = useState(moment().startOf('days'));
+  const [endDate, setEndDate] = useState(moment(startDate, "DD-MM-YYYY").add('days', 6));
+  const [focusedInput, setFocusedInput] = useState(null);
+  
+  const [addrtype, setAddrtype] = useState(["Football", "Cricket","BasketBall","K1","UFC","Show ALL"])
 
+
+
+  const Add = addrtype.map(Add => Add)
+  const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]))
   return (
     <div className="filteration-type pt-40 pb-40">
       <form>
@@ -15,84 +28,35 @@ const Search = props => {
             </button>
           </div> */}
           <div className="fancy-input float-left">
-            <select>
-                <option value="">Filter By Games</option>
-                <option value="1">Football</option>
-                <option value="2">Cricket</option>
-                <option value="3">BasketBall</option>
-                <option value="3">K1</option>
-                <option value="3">UFC</option>
-                <option value="3">Show ALL</option>
-            </select>
+          < select
+            onChange={e => handleAddrTypeChange(e)}
+            className="browser-default " style={{width: '187px'}} >
+              <option value="" disabled selected style={{fontSize: '20px'}}>Select Event Type</option>
+            {
+              Add.map((address, key) => <option value={key} style={{fontSize: '20px'}}>{address}</option>)
+              }
+            </select >
+           
           </div>
-          {/* <div className="fancy-input float-left ">
-            <select>
-            <option>City</option>
-                <option value="1">London</option>
-                <option value="2">Monchister</option>
-                <option value="3">Islamabad</option>
-            </select>
-          </div> */}
-          {/* <div className="fancy-input float-left ">
-          <select name="category" id="input-icategory">
-									<option>Token Price range</option> 
-									<option>£1-£10</option>
-									<option>£10-£20</option>
-									<option>£20-£30</option>
-									<option>£30-£40 </option>
-									<option>£50+ </option>
-								</select>
-          </div> */}
-          {/* <div className="market-date-fancy-input float-left "> */}
-          <DatePicker
-                      
-                      onChange={(date)=>{
-                        // var abc= date.toISOString()
-                        // var bcd= abc.split('T')
-                        console.log(date)
-                        // this.setState({
-                        //   start_date:date,
-                        //   start_date_count:bcd
-                        // })
-                        // console.log(this.state.start_date)
-                      }}
-          // selected={this.state.start_date}
-        />  
-            {/* <input type='date' name='date' id='date'/> 
-             <select>
-              <option>Live date</option>
-              <option>Live date</option>
-              <option>Live date</option>
-            </select> */}
-          {/* </div> */}
-          {/* <div className="fancy-input float-left">
-            <select className="border-0">
-              <option>Launched</option>
-              <option>Launched</option>
-              <option>Launched</option>
-            </select>
-          </div>
-          <div className="fancy-input float-left">
-            <select className="border-0">
-              <option>Latest</option>
-              <option>Latest</option>
-              <option>Latest</option>
-            </select>
-          </div> */}
-          {/* <div className="float-right responsive-left pt-2">
-            <a href="#" onClick={e => toggleView(e, "list")}>
-              <img
-                src="imagesWeb/filter-icon.png"
-                alt="icon"
-              />
-            </a>
-            <a href="#" onClick={e => toggleView(e, "grid")}>
-              <img
-                src="imagesWeb/filter-icon2.png"
-                alt="icon"
-              />
-            </a>
-          </div> */}
+          <div className="text-center">
+                 <DateRangePicker
+                  startDate={startDate}
+                  endDate={ moment(startDate, "DD-MM-YYYY").add('days', 6)}
+                  startDateId={2}
+                  endDateId={1}
+                  onDatesChange={
+                    ({ startDate, endDate }) => (
+                           setStartDate( startDate ),
+                           setEndDate(endDate )
+                                                          
+                      )}
+                  focusedInput={focusedInput}
+                  onFocusChange={focusedInput => setFocusedInput(focusedInput )} 
+                  // showClearDates={true}
+                  numberOfMonths={1}
+                  isOutsideRange={() => false}
+                        /> 
+           </div>
         </div>
       </form>
     </div>

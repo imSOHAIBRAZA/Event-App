@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="col-lg-12 p-0">
+    <div className="col-lg-12 p-0" id="event">
       <div className="custom-container">
         <div className="clearfix pt-3 pb-3 d-flex block-d align-items-center">
           <div className="float-left center-text w-100 w-sm-100 f-none">

@@ -54,7 +54,7 @@ const PropertyListView = (props) => {
             loading={PropertiesDataRes.loading}
           />
           : PropertiesDataRes.propertiesData &&
-          <div className="col-lg-12 custom-container">
+          <div className="col-lg-12 custom-container" >
             <Search />
 
             <PropertyList propertyData={PropertiesDataRes.propertiesData.data}  />
