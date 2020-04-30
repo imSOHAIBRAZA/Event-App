@@ -226,8 +226,10 @@ const MarketplaceSpecs = (props) => {
 								<i className="fa fa-commenting-o d-inline-block" aria-hidden="true"></i>
 							</div>
 						</div> */}
-						<List data={all_broadcasts}/>
+						
+						
 					</div>
+					{all_broadcasts.length?<List data={all_broadcasts}/>:<h3 className="center text-center" >No BRODCAST EVENT</h3>}
 				</div>
 			</div>
 		</div>

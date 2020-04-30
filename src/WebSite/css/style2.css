@@ -1383,7 +1383,8 @@ color:#fff;
 /*portfolio listing*/
 .item-list{
 	display:flex;
-	border: 1px solid #E4E4E4;
+    border: 1px solid #E4E4E4;
+    box-shadow: darkgrey 0px 0px 7px;
 }
 
 .porfolio-item-details {
