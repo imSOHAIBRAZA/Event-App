@@ -10,7 +10,7 @@ const PropertyList = ({propertyData,Filter}) => {
       const data = eventSelector(propertyData,Filter)
       
       return (
-        propertyData &&  <Grid propertyData={data} /> 
+        propertyData.length ?  <Grid propertyData={data} />:<h1 className="text-center">NO EVENT</h1> 
       )
     }
   };

@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel'
 
 class EventListItem extends Component {
  
-
+state={
+  index:0
+}
  
-// client: {id: 2, name: "Nurai", email: "nurai@gmail.com", password: "Nurai", place_size: 1000, …}
+ handleSelect = (selectedIndex, e) => {
+
+  this.setState({
+    index : selectedIndex
+  })
+};
 
 
 
@@ -26,7 +34,41 @@ class EventListItem extends Component {
                 <div className="image-content position-relative" style={{width:'457px'}}>
                
 
-                  <img
+
+                <Carousel activeIndex={this.state.index} onSelect={this.handleSelect} controls={false} >
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-242"
+          src={photos?`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${photos}`:`../../imagesWeb/event.png`}
+          alt="First slide"
+        />
+        {/* <Carousel.Caption>
+        </Carousel.Caption> */}
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-242"
+          src={photos?`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${photos}`:`../../imagesWeb/event.png`}
+          alt="Second slide"
+        />
+
+        {/* <Carousel.Caption>
+        </Carousel.Caption> */}
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100 h-242"
+          src={photos?`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${photos}`:`../../imagesWeb/event.png`}
+          alt="Third slide"
+        />
+
+        {/* <Carousel.Caption>
+        </Carousel.Caption> */}
+      </Carousel.Item>
+    </Carousel>
+               
+
+                  {/* <img
                     // src={`process.env.PUBLIC_URL/${photos}`}
                     
                     src={photos?`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${photos}`:`../../imagesWeb/event.png`}
@@ -34,7 +76,7 @@ class EventListItem extends Component {
                     // src={property_image[0]}
                     alt="icon"
                     className="w-100 h-242"
-                  />
+                  /> */}
                
                   <button className="danger-btn">{broadcasting_date.slice(0,10)}</button>
                 </div>
@@ -59,7 +101,7 @@ class EventListItem extends Component {
                       {is_without_sound=== 1?<p>Sound On</p>:<p>Sound Off</p>}
                       </p> */}
                       <img
-                      style={{ borderRadius: '50%', height: '50px', width: '50px' }}
+                      style={{ borderRadius: '50%', height: '70px', width: '100px' }}
                       src={logo?`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${logo}`:`../../imagesWeb/logos.png`}
                     
 
@@ -120,6 +162,10 @@ class EventListItem extends Component {
                     </div>
                     <div className="bottm-txt border12 pb-2 fs-14">
                       <div className=""> {is_without_sound=== 1?<strong>Sound On</strong>:<strong>Sound Off</strong>}</div>
+                  <span>    <svg className="bi bi-tv" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2.5 13.5A.5.5 0 013 13h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zM13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 001 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0013.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" clip-rule="evenodd"/>
+</svg>
+                      <strong>{nb_tvs}</strong></span>
                     <div className="">{address}</div>
                       {/* <div className="">Hardcap</div> */}
                     </div>
@@ -159,6 +205,7 @@ class EventListItem extends Component {
                   </div>
                 </div>
               </div>
+              
             </Link>
           </div>
 
