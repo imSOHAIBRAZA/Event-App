@@ -1,22 +1,38 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { DateRangePicker } from 'react-dates';
+import { useDispatch, useSelector } from "react-redux";
+
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import moment from 'moment';
+import { getAllPropertiesList } from "../../../actions/marketPlaceAction";
+import { setTextFilter } from "../../../actions/filters";
+
 
 const Search = props => {
- 
-  const [eventType, setEventType] = useState('');
-  const [startDate, setStartDate] = useState(moment().startOf('days'));
-  const [endDate, setEndDate] = useState(moment(startDate, "DD-MM-YYYY").add('days', 6));
-  const [focusedInput, setFocusedInput] = useState(null);
-  
-  const [addrtype, setAddrtype] = useState(["Football", "Cricket","BasketBall","K1","UFC","Show ALL"])
+  const dispatch = useDispatch();
 
+  const [eventType, setEventType] = useState('');
+  const [startDate, setStartDate] = useState(moment());
+  const [endDate, setEndDate] = useState(moment().add('days', 6));
+  const [focusedInput, setFocusedInput] = useState(null);
+  const [addrtype, setAddrtype] = useState(["Football", "Cricket","BasketBall","K1","UFC"])
+
+  useEffect(() => {
+
+    dispatch(getAllPropertiesList(startDate, endDate));
+  }, [startDate,endDate]);
+
+  // useEffect(()=>{
+  //   dispatch(setTextFilter(addrtype));
+    
+  // },[addrtype])
 
 
   const Add = addrtype.map(Add => Add)
-  const handleAddrTypeChange = (e) => console.log((addrtype[e.target.value]))
+  const handleAddrTypeChange = (e) => {
+    dispatch(setTextFilter(e.target.value));
+  }
   return (
     <div className="filteration-type pt-40 pb-40">
       <form>
@@ -33,8 +49,10 @@ const Search = props => {
             className="browser-default " style={{width: '187px'}} >
               <option value="" disabled selected style={{fontSize: '20px'}}>Select Event Type</option>
             {
-              Add.map((address, key) => <option value={key} style={{fontSize: '20px'}}>{address}</option>)
+              Add.map((address, key) => <option value={address} style={{fontSize: '20px'}}>{address}</option>)
               }
+              <option value=""  style={{fontSize: '20px'}}>Show All</option>
+
             </select >
            
           </div>

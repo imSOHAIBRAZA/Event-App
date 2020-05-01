@@ -17,16 +17,16 @@ const PropertyListView = (props) => {
 
   //** GET STATE & DISPATCH WITH STORE **//
   const dispatch = useDispatch();
-  const { PropertiesDataRes, user } = useSelector(({ marketPlaceReducer }) => ({
+  const { PropertiesDataRes, Filter } = useSelector(({ marketPlaceReducer,filterReducer }) => ({
     PropertiesDataRes: marketPlaceReducer,
-    // user: state.user,
+    Filter: filterReducer,
 
   }));
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    dispatch(getAllPropertiesList(6, 0));
-  }, []);
+  //   dispatch(getAllPropertiesList(6, 0));
+  // }, []);
 
   const handlePageChange = (pageNumber = 1) => {
     console.log(`active page is ${pageNumber}`);
@@ -55,9 +55,9 @@ const PropertyListView = (props) => {
           />
           : PropertiesDataRes.propertiesData &&
           <div className="col-lg-12 custom-container" >
-            <Search />
+            {/* <Search /> */}
 
-            <PropertyList propertyData={PropertiesDataRes.propertiesData.data}  />
+            <PropertyList propertyData={PropertiesDataRes.propertiesData.data} Filter={Filter} />
 
             {/* <Pagination
               hideNavigation

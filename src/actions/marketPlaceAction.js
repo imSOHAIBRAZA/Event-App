@@ -16,7 +16,7 @@ export function getAllPropertyList(data) {
     };
 }
  
-export function getAllPropertiesList(limit, skip) {
+export function getAllPropertiesList(startData, endDate) {
 
     return async function (dispatch) {
 
@@ -25,7 +25,7 @@ export function getAllPropertiesList(limit, skip) {
         
             // let data = await marketPlaceApi.getAllProperties(limit, skip);
             // dispatch(getAllPropertyList(data));
-            EventsApi.getEventsByDate(limit, skip)
+            EventsApi.getEventsByDate(startData, endDate)
             .then(
                 ({data})=> dispatch(getAllPropertyList(data))
             )

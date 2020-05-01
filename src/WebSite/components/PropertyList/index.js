@@ -1,11 +1,16 @@
 import React from "react";
 import Grid from "../../components/Views/Grid/Grid";
+import eventSelector from '../../../selector/EventSelector'
 
-const PropertyList = (props) => {
-    if (props.propertyData) {
+const PropertyList = ({propertyData,Filter}) => {
+  
+    if (propertyData) {
       // const { products } = props.propertyData
+
+      const data = eventSelector(propertyData,Filter)
+      
       return (
-        props.propertyData &&  <Grid propertyData={props.propertyData} /> 
+        propertyData &&  <Grid propertyData={data} /> 
       )
     }
   };

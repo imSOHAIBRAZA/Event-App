@@ -2,18 +2,27 @@ import { getItem } from "../utils/localStore";
 import { Base_Url } from '../app.constant';
 import axios from "axios";
 
+import moment from 'moment';
+
 
 class EventsApi {
 
    
 
-    static getEventsByDate = async (limit, skip) => {
+    static getEventsByDate = async (startDate, endDate) => {
+        let start_data =moment(startDate).format("YYYY-MM-DD");
+        let end_data =moment(endDate).format("YYYY-MM-DD");
+        // debugger;
         const ajaxRequestHeaders = new Headers({
             "Content-Type": "application/json",
             Accept: "application/json"
         });
         let response = await axios({
-            url: `${Base_Url}/events?start=2019-12-12&end=2020-12-18`,
+            // url: `${Base_Url}/events?start=2019-12-12&end=2020-12-18`,
+            // url: `${Base_Url}/events?start=2020-2-20&end=2020-2-25`,
+            url: `${Base_Url}/events?start=${start_data}&end=${end_data}`,
+
+
             method: "GET",
             headers: ajaxRequestHeaders,
         });
