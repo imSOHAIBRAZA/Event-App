@@ -32,7 +32,7 @@ const MarketplaceSpecs = (props) => {
 						<div className="col-lg-9 pr-0 large-padd-0">
 							
 							<div className="row row-eq-height mb-3">
-								<div className="col-lg-8 pl-0 padding-right-zero">
+								<div className="col-lg-12 pl-0 padding-right-zero">
 									<div className="border-arround3 p-3 h-100">
 										<div className="">
 											<div className="d-inline-block">
@@ -45,43 +45,7 @@ const MarketplaceSpecs = (props) => {
 										</div>
 									</div>
 								</div>
-								<div className="col-lg-4 p-0 padding-right-zero">
-									<div className="border-arround h-100 pt-1 pl-2 pr-4 pb-4 mb-1">
-										<div className="clearfix">
-											<div className="float-left relative">
-												{/* {manager_avatar.length > 0 ?
-													<img
-														src={
-															manager_avatar
-															// process.env.PUBLIC_URL + 'images/owner-image.png'
-														}
-														alt="icon"
-														style={{ borderRadius: '50%', height: '50px', width: '50px' }}
-														className="w-30px"
-													/> :
-													<img
-														src={
-															// manager_avatar
-															process.env.PUBLIC_URL + 'images/owner-image.png'
-														}
-														alt="icon"
-														style={{ borderRadius: '50%', height: '50px', width: '50px' }}
-														className="w-30px"
-													/>
-												} */}
-												<img src="../imagesWeb/msg.png" alt="icon" className="lr-0 w-10px" />
-											</div>
-											<div className="float-left pl-1 pt-1 sm-float-none padding-zero">
-												<strong>Created at</strong>
-												{/* <h3 className="m-0 fs-14 fw-bold fs-lh">Antoinette Darcy</h3> */}
-												<p className="m-0 fs-12">{created_at}</p>
-											</div>
-											<div className="float-right pt-2 sm-float-none">
-												{/* <img src="../imagesWeb/blue-envelope.png" alt="envelope" /> */}
-											</div>
-										</div>
-									</div>
-								</div>
+							
 							</div>
 							
 						
@@ -127,6 +91,22 @@ const MarketplaceSpecs = (props) => {
 									</div>
 								</div>
 							</div>
+
+							<div className="text-left" style={{padding:'30px',marginTop: '20px',backgroundColor: '#FF5722'}}>
+    {/* <form className="text-center center"> */}
+
+        <div className="clearfix">
+          <div className="fancy-input float-left w-25 position-relative">
+            <input type="text" name="" placeholder="Search By Place Name" />
+            <button className="btn-search">
+              <i className="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
+         
+         
+        </div>
+      {/* </form> */}
+    </div>
 							
 							{/* <div className="row pb-40">
 								<div className="col-lg-12 p-0">

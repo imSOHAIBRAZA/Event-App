@@ -34,45 +34,32 @@ const EventDetail = (props) => {
     dispatch(getPropertyDetail(props.match.params.id));
 
   },[]);
-  console.log('EVENT D++>',PropertyDetail.propertyDetail)
  
 
   return (
     <Fragment>
       
-      <div className="head-main-menu">
+      <div className="head-main-menu" style={{marginBottom:'40px'}}>
       <div className="comp-logo">
-        <img src='../imagesWeb/logo.png' alt="logo" style={{width: '200px'}} />
-        <span style={{marginLeft:'30px'}}><Link to="/" style={{color:"#b5caca"}} style={{color: '#03A9F4'}}> Back to Events</Link></span>
+        <img src='../imagesWeb/logo.png' alt="logo" style={{width: '200px'}} /><br/>
+        <span style={{marginLeft:'30px'}}>
+          <Link to="/" style={{color: 'rgb(255, 255, 255)',background: '#ff6a00', margin: '23px',padding: '13px',borderRadius: '9px',position: 'absolute',top: '80px'}}> Back to Events</Link>
+          </span>
       </div>
       <div className="main-menu" id="header-toggle">
         
         <ul className="hover-menu" style={{display: 'inline-flex'}}>
          
           <li style={{paddingRight: '25px'}}>
-            <Link to="/signup" style={{color:"#b5caca"}}>Sign up</Link>
+            <Link to="/signup" style={{color:"black"}}>Sign up</Link>
           </li>
           <li>
-            <Link to="/contact" style={{color:"#b5caca"}}>Contact</Link>
+            <Link to="/contact" style={{color:"black"}}>Contact</Link>
           </li>
         </ul>
       </div>
     </div>
-<div className="text-left" style={{padding:'30px',marginTop: '20px',backgroundColor: '#FF5722'}}>
-    {/* <form className="text-center center"> */}
 
-        <div className="clearfix">
-          <div className="fancy-input float-left w-25 position-relative">
-            <input type="text" name="" placeholder="Search By Place Name" />
-            <button className="btn-search">
-              <i className="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-         
-         
-        </div>
-      {/* </form> */}
-    </div>
 
         {
           PropertyDetail.loading ? <h2>Loading..</h2> : PropertyDetail.propertyDetail && 

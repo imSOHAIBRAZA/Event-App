@@ -7,7 +7,7 @@ const HeaderMenu = () => {
       <div className="comp-logo">
         <img src='imagesWeb/logo.png' alt="logo" style={{width: '200px'}} />
       </div>
-      <div className="main-menu" id="header-toggle">
+      <div className="main-menu" id="header-toggle" >
         <ul className="hover-menu">
           {/* <li>
             <Link to="/">Home</Link>
@@ -52,10 +52,10 @@ const HeaderMenu = () => {
             </div>
           </li> */}
           <li>
-            <Link to="/signup" style={{color:"#b5caca"}}>Sign up</Link>
+            <Link to="/signup" style={{color:"black"}}>Sign up</Link>
           </li>
           <li>
-            <Link to="/contact" style={{color:"#b5caca"}}>Contact</Link>
+            <Link to="/contact" style={{color:"black"}}>Contact</Link>
           </li>
         </ul>
       </div>

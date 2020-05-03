@@ -1,6 +1,8 @@
 import React, { useState, useEffect, Fragment } from "react";
 import { DateRangePicker } from 'react-dates';
 import { useDispatch, useSelector } from "react-redux";
+import { Multiselect } from 'multiselect-react-dropdown';
+import { Form } from 'react-bootstrap';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -16,7 +18,7 @@ const Search = props => {
   const [startDate, setStartDate] = useState(moment());
   const [endDate, setEndDate] = useState(moment().add('days', 6));
   const [focusedInput, setFocusedInput] = useState(null);
-  const [addrtype, setAddrtype] = useState(["Football", "Cricket","BasketBall","K1","UFC"])
+  const [addrtype, setAddrtype] = useState([{name:"Football"}, {name:"Cricket"},{name:"BasketBall"},{name:"K1"},{name:"UFC"}])
 
   useEffect(() => {
 
@@ -31,29 +33,37 @@ const Search = props => {
 
   const Add = addrtype.map(Add => Add)
   const handleAddrTypeChange = (e) => {
-    dispatch(setTextFilter(e.target.value));
+    // let data = e.key
+    // debugger;
+    dispatch(setTextFilter(e));
   }
   return (
     <div className="filteration-type pt-40 pb-40">
+      
       <form>
         <div className="clearfix">
-          {/* <div className="fancy-input float-left w-25 position-relative">
-            <input type="text" name="" placeholder="Search by name or tag" />
-            <button className="btn-search">
-              <i className="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div> */}
-          <div className="fancy-input float-left">
-          < select
+          
+           
+          <div className=" float-left" style={{marginLeft:'30px'}}>
+          <Multiselect
+              options={addrtype}
+              placeholder="Select Event Type"
+              displayValue="name"
+              style={{  searchBox: { width: '300px',boxShadow: 'blue 0px 0px 4px' }} }
+              showCheckbox={true}
+              onSelect={e => handleAddrTypeChange(e)} // Function will trigger on select event
+              onRemove={e => handleAddrTypeChange(e)} // Function will trigger on remove event
+            />
+          {/* < select 
             onChange={e => handleAddrTypeChange(e)}
-            className="browser-default " style={{width: '187px'}} >
-              <option value="" disabled selected style={{fontSize: '20px'}}>Select Event Type</option>
+            className="browser-default selectpicker" style={{width: '187px',boxShadow: 'blue 0px 0px 4px'}}  >
+              <option value="" disabled selected style={{fontSize: '20px'}} >Select Event Type</option>
             {
-              Add.map((address, key) => <option value={address} style={{fontSize: '20px'}}>{address}</option>)
+              Add.map((address, key) => <option value={address} style={{fontSize: '20px',color: 'black'}}>{address}</option>)
               }
               <option value=""  style={{fontSize: '20px'}}>Show All</option>
 
-            </select >
+          </select > */}
            
           </div>
           <div className="text-center">

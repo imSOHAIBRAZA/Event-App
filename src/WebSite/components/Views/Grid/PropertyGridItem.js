@@ -52,7 +52,7 @@ class PropertyGridItem extends Component {
               <div className="photo-description image-content" >
 
                 <div className=" clearfix d-flex align-items-center">
-                  <div className="float-left  h-sm-72px">
+                  <div className="float-left ">
                     <h5 className="place-head m-0 ">{title}</h5>
                   </div>
 

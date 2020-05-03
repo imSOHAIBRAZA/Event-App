@@ -1,6 +1,5 @@
 
-const eventSelector = (event, { text, startDate }) => {
-  
+const eventSelector = (event, text='') => {
     return event.filter(e => {
         // const searchByCategory = e.type_event.name == text;
         const textMatch = e.type_event.name.toLowerCase().includes(text.toLowerCase());

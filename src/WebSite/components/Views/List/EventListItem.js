@@ -26,7 +26,7 @@ state={
     const {name:names}=city_client
     return (
       <>
-          <div id={id} className="col-md-12 pt-3 zero-padding">
+          <div id={id} className="col-md-9 pt-3 zero-padding">
             <Link to= {`${id}`}>
               <div className="item-list position-relative">
                
@@ -90,7 +90,7 @@ state={
                   <i class="fa fa-star rat-opacity"></i>
                   <i class="fa fa-star rat-opacity"></i>
                 </div> */}
-                      <h3 className="fs-24 m-0">{type}</h3>
+                      <h3 className="fs-24 m-0">{`${name} `} <span style={{ color: '#FF5722',fontSize: '16px'}}>{`(${type})`}</span></h3>
                       <div className="light-gray">
                         <i className="fa fa-map-marker d-inline-block"></i>
                         <p className="m-0 d-inline-block fs-16">{names}</p>
@@ -143,6 +143,8 @@ state={
                         </div>
                       </div>
                     </div> */}
+                    <div className="">{address}</div>
+
                     <div className="pt-3">
                       <div className="clearfix">
                         {/* <div className="tooltip-bar float-left">&#163;{'soft_cap'}</div>
@@ -166,7 +168,7 @@ state={
   <path fill-rule="evenodd" d="M2.5 13.5A.5.5 0 013 13h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zM13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 001 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0013.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" clip-rule="evenodd"/>
 </svg>
                       <strong>{nb_tvs}</strong></span>
-                    <div className="">{address}</div>
+                    {/* <div className="">{address}</div> */}
                       {/* <div className="">Hardcap</div> */}
                     </div>
                     <div className="user-bottom mt-2 mb-2">
