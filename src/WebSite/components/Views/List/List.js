@@ -22,6 +22,7 @@ const List =(props)=> {
         {/* <div className="row"> */}
 
          {props.data.map((data,i)=>(
+           
           <EventListItem PropertyItem={data} />
         ))}
         {/* </div> */}

@@ -5,20 +5,12 @@ import List from '../Views/List/List.js';
 
 const MarketplaceSpecs = (props) => {
 
-	
-	
-	
-	const {created_at,date,description,id,thumbnail,title,all_broadcasts} = props.eventData.data[0]
-	console.log('BRODCAST DETAILS::>',all_broadcasts)
-	// created_at: "2019-12-12 14:48:50"
-	// date: "2019-12-17 05:00:00"
-	// deleted_at: null
-	// description: "NBA Regular Season 2019/20"
-	// id: 4
-	// thumbnail: "vatud3h2b0g4wwokk8.jpg"
-	// title: "Rockets Vs Spurs"
-	// type_fk: 2
-	// updated_at: null
+
+
+
+	const { created_at, date, description, id, thumbnail, title, all_broadcasts } = props.eventData.data[0]
+
+
 
 	return (
 
@@ -30,7 +22,7 @@ const MarketplaceSpecs = (props) => {
 				<div className="custom-container">
 					<div className="row pt-5">
 						<div className="col-lg-9 pr-0 large-padd-0">
-							
+
 							<div className="row row-eq-height mb-3">
 								<div className="col-lg-12 pl-0 padding-right-zero">
 									<div className="border-arround3 p-3 h-100">
@@ -39,16 +31,16 @@ const MarketplaceSpecs = (props) => {
 												<img src="../imagesWeb/add-fvrt.png" alt="favorite" />
 											</div>
 											<div className="d-inline-block">
-									<span className="fs-24 fw-bold m-0 color-blue pr-2"> { title} </span>
-									<span className="fs-14 gray6">{date}</span>
+												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
+												<span className="fs-14 gray6">{date}</span>
 											</div>
 										</div>
 									</div>
 								</div>
-							
+
 							</div>
-							
-						
+
+
 							<div className="row mb-3">
 								<div className="col-lg-9 pl-0 md-size-mb-16 md-size-p-0">
 									<div className="border-arround4 white p-4 h-100">
@@ -83,31 +75,30 @@ const MarketplaceSpecs = (props) => {
 										</div>
 									</div>
 								</div>
-								
+
 								<div className="col-lg-3 p-0">
 									<div className="border-arround h-100">
-									<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery image" style={{    height: 'inherit'}}className=" w-100" />
+										<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery image" style={{ height: 'inherit' }} className=" w-100" />
 
 									</div>
 								</div>
 							</div>
 
-							<div className="text-left" style={{padding:'30px',marginTop: '20px',backgroundColor: '#FF5722'}}>
-    {/* <form className="text-center center"> */}
+							<div className="text-left" style={{ padding: '30px', marginTop: '20px', backgroundColor: '#FF5722' }}>
+								{/* <form className="text-center center"> */}
+								<div className="clearfix">
+									<div className="fancy-input float-left w-25 position-relative">
+										<input type="text" name="" placeholder="Search By Place Name" />
+										<button className="btn-search">
+											<i className="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</div>
 
-        <div className="clearfix">
-          <div className="fancy-input float-left w-25 position-relative">
-            <input type="text" name="" placeholder="Search By Place Name" />
-            <button className="btn-search">
-              <i className="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-         
-         
-        </div>
-      {/* </form> */}
-    </div>
-							
+
+								</div>
+								{/* </form> */}
+							</div>
+
 							{/* <div className="row pb-40">
 								<div className="col-lg-12 p-0">
 									<div className="border-arround p-4">
@@ -161,6 +152,35 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 						</div>
+						<div className="col-lg-3 pr-0 large-padd-0" >
+							<div>
+								<h5 style={{ background: '#ff6a00', borderRadius: '6px', color: 'white', marginRight: '10px', padding: '15px' }} >
+									Today's games
+								</h5>
+							</div>
+
+							<div style={{    margin: '10px 0px', boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							Afghanistan Vs West Indies
+							10/20/2019 10:20:00
+							</div>
+
+							<div style={{ margin: '10px 0px',boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							Afghanistan Vs West Indies
+							10/20/2019 10:20:00
+							</div>
+
+							<div style={{ margin: '10px 0px',boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							Afghanistan Vs West Indies
+							10/20/2019 10:20:00
+							</div>
+
+							<div>
+						</div>
+
+
+
+						</div>
+
 						{/* <div className="col-lg-3 md-size-p-0">
 							<div className="right-section border-arround2 mb-4">
 								<div className="p-3">
@@ -206,10 +226,10 @@ const MarketplaceSpecs = (props) => {
 								<i className="fa fa-commenting-o d-inline-block" aria-hidden="true"></i>
 							</div>
 						</div> */}
-						
-						
+
+
 					</div>
-					{all_broadcasts.length?<List data={all_broadcasts}/>:<h3 className="center text-center" >No BRODCAST EVENT</h3>}
+					{all_broadcasts.length ? <List data={all_broadcasts} /> : <h3 className="center text-center" >No BRODCAST EVENT</h3>}
 				</div>
 			</div>
 		</div>

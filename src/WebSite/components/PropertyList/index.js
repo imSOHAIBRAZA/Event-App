@@ -10,12 +10,17 @@ const PropertyList = ({propertyData,Filter}) => {
     
   //   return filterData = filterValue[i]
   // }
-  let filterData=filterValue.forEach(element => element);
+  // console.log('sa 1',filterValue)
+  // let filterData=filterValue.filter(element =>{
+  //   // console.log('wa',element)
+  //   return element
+  // });
   // console.log('sa',filterData)
+
     if (propertyData) {
       // const { products } = props.propertyData
 
-      const data = eventSelector(propertyData,filterData)
+      const data = eventSelector(propertyData,filterValue)
       
       return (
         propertyData.length ?  <Grid propertyData={data} />:<h1 className="text-center">NO EVENT</h1> 
