@@ -53,10 +53,10 @@ const HeaderMenu = () => {
             </div>
           </li> */}
           <li>
-            <Link to="/signup" style={{color:"black"}}>Sign up</Link>
+            <Link to="/signup" style={{color:"#f96716"}}>Sign up</Link>
           </li>
           <li>
-            <Link to="/contact" style={{color:"black"}}>Contact</Link>
+            <Link to="/contact" style={{color:"#f96716"}}>Contact</Link>
           </li>
         </ul>
       </div>
