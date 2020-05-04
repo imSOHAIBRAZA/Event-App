@@ -1261,4 +1261,14 @@ color:#fff;
     opacity: 0.5;
     color: inherit;
 }
+
+.games{
+	margin: 0px 10px 0px 0px;
+    /* box-shadow: blue 0px 0px 4px; */
+    /* border-radius: 6px; */
+    color: white;
+    background: #12d3f1;;
+    padding: 15px;
+    border: 1px solid;
+}
 /* end */

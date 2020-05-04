@@ -159,17 +159,17 @@ const MarketplaceSpecs = (props) => {
 								</h5>
 							</div>
 
-							<div style={{    margin: '10px 0px', boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							<div className="games" >
 							Afghanistan Vs West Indies
 							10/20/2019 10:20:00
 							</div>
 
-							<div style={{ margin: '10px 0px',boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							<div className="games" >
 							Afghanistan Vs West Indies
 							10/20/2019 10:20:00
 							</div>
 
-							<div style={{ margin: '10px 0px',boxShadow: 'blue 0px 0px 4px', borderRadius: '6px', color: 'black', marginRight: '10px', padding: '15px' }} >
+							<div className="games" >
 							Afghanistan Vs West Indies
 							10/20/2019 10:20:00
 							</div>
