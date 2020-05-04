@@ -88,7 +88,7 @@ const MarketplaceSpecs = (props) => {
 								{/* <form className="text-center center"> */}
 								<div className="clearfix">
 									<div className="fancy-input float-left w-25 position-relative">
-										<input type="text" name="" placeholder="Search By Place Name" />
+										<input type="text" name="" placeholder="Search Place" />
 										<button className="btn-search">
 											<i className="fa fa-search" aria-hidden="true"></i>
 										</button>

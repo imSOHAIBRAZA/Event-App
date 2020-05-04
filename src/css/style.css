@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     height: 90%;
 	width: 100%;
-	padding: 120px 15px;
+	padding: 120px 15px 30px;
 }
 .header-txt h2{
 	font-family: 'Playfair Display', serif;
@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 .comment-bx {
     position: fixed;
     left: 2%;
-    bottom: 4%;
+    bottom: 22%;
     width: 150px;
     height: 72px;
     /* border-radius: 50%; */

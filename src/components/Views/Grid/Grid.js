@@ -8,7 +8,7 @@ const Grid =(props)=> {
     return (
       <>
         <div className="row">
-        {props.propertyData.map((data,i)=>(
+        {(props.propertyData || []).map((data,i)=>(
           <PropertyGridItem PropertyItem={data} />
         ))}
          

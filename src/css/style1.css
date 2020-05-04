@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     height: 100%;
 	width: 100%;
-	padding: 120px 15px;
+	padding: 120px 15px 30px;
 }
 .header-txt h2{
 	font-family: 'Playfair Display', serif;
@@ -248,10 +248,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .comment-bx {
     position: absolute;
-    right: 6%;
-    bottom: 6%;
+	right: 6%;
+	left:15%;
+    bottom: 22%;
     width: 150px;
-	height: 72px;
+	height: 52px;
 	border-radius: 10px;
     /* border-radius: 50%; */
 	background: rgb(12, 183, 251);

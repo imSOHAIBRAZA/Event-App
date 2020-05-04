@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import downarrow from "../../images/down-arrow.png"
 const CommentBox = () => {
   return (
+    <div className="text-center">
 < a href="#event">
     <div className="comment-bx text-center">
      
@@ -18,6 +19,7 @@ const CommentBox = () => {
       
     </div>
     </a> 
+    </div>
   );
 };
 

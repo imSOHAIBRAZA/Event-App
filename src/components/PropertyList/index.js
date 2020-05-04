@@ -4,6 +4,7 @@ import eventSelector from '../../selector/EventSelector'
 
 const PropertyList = ({propertyData,Filter}) => {
   let filterValue = [...Filter.text].map(v=>v.name)
+  
   // let filterData;
   //  for (let i=0 ;i < filterValue.length ;i++) {
   //   // console.log(filterValue[i]);

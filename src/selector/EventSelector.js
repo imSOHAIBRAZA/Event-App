@@ -1,44 +1,27 @@
 
 const eventSelector = (event, text='') => {
-    // debugger;
-    if(text.length>0){
-        text.map(v=>{
-                
-            return event.filter(e => {
-                // const searchByCategory = e.type_event.name == text;
-                const textMatch = e.type_event.name.toLowerCase().includes(v.toLowerCase());
-                return  textMatch ;
-            })
-
+    // debugger;  
+    text = text.map(x => x.toLowerCase())          
+    if(text.length){
+       return event.filter(e => {
+            return text.indexOf(e.type_event.name.toLowerCase()) > -1
         })
+        
     }
         else{
             return event.filter(e => {
-                // const searchByCategory = e.type_event.name == text;
                 const textMatch = e.type_event.name;
                 return  textMatch ;
             })
         }
-
-
-
-    // }
-    // return event.filter(e => {
-    //     // const searchByCategory = e.type_event.name == text;
-    //     const textMatch = e.type_event.name.toLowerCase().includes(text.toLowerCase());
-    //     return  textMatch ;
-    // })
-
 }
 
+export default eventSelector;
+// let data = []
 
-// export const eventSelectorByText = (event, { text }) => {
-
-//     return event.ads.filter(ad => {
-//         console.log('filter ad', ad)
-      
-//         const textMatch = ad.title.toLowerCase().includes(text.toLowerCase());
-//         return textMatch ;
+// for(let i = 0; i <= 10; i++) {
+//     data.push({
+//         startTime: new Date(),
+//         endTime: new  Date(new Date().setDay(new Date().))
 //     })
 // }
-export default eventSelector;

@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     height: 90%;
 	width: 100%;
-	padding: 120px 15px !important;
+	padding: 120px 15px 30px !important;
 }
 .header-txt h2{
 	font-family: 'Playfair Display', serif;
