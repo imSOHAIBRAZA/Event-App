@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap');
 body {
-    background-color: #ffffff !important;
+    background-color: #fff;
 	font-family: 'Karla', sans-serif;
 }
 li{
@@ -220,7 +220,7 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     height: 90%;
 	width: 100%;
-	padding: 120px 15px !important;
+	padding: 0px 15px;
 }
 .header-txt h2{
 	font-family: 'Playfair Display', serif;
@@ -403,7 +403,7 @@ font-family: Playfair Display;
     background-color: #0E1E46;
 	padding-top: 100px;
     padding-bottom: 100px;
-	/* background-image: url(../../../public/imagesWeb/portfolio-bg.png); */
+	/* background-image: url(../imagesWeb/portfolio-bg.png); */
     background-repeat: no-repeat;
     background-position: top right;
 	background-size: 100%;
@@ -601,7 +601,7 @@ font-family: Playfair Display;
     padding-bottom: 27px;
 }
 .tokensale-left{
-	/* background:url(../../../public/imagesWeb/tokensale-bg.png) no-repeat; */
+	/* background:url(../imagesWeb/tokensale-bg.png) no-repeat; */
 	background-position:top left;
 	background-size:contain;
 }
@@ -960,10 +960,11 @@ font-family: Playfair Display;
 /*end*/
 /*Footer*/
 footer {
+    margin-top: 50px;
     background-color: #12d3f1;
     padding-top: 90px;
     padding-bottom: 111px;
-	background-image: url(../../src/images/footer-bg.png);
+	background-image: url(../images/footer-bg.png);
     background-repeat: repeat-x;
     background-position: bottom;
 	
@@ -1382,7 +1383,8 @@ color:#fff;
 /*portfolio listing*/
 .item-list{
 	display:flex;
-	border: 1px solid #E4E4E4;
+    border: 1px solid #E4E4E4;
+    box-shadow: darkgrey 0px 0px 7px;
 }
 
 .porfolio-item-details {
@@ -1545,9 +1547,13 @@ color:#fff;
 .pb-80{
     padding-bottom: 80px;
 }
+
 .fancy-btn .btn {
-    padding: 13px 45px;
-    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:auto;
+    padding: 0px 30px;
     color: #FFFFFF;
     border-radius: 30px;
     font-weight: bold;
@@ -1557,13 +1563,12 @@ color:#fff;
 }
 .fancy-btn .btn:hover{
     background: black;
-    width: 100%;
 }
 .black-back{
     background: black;
 }
 .wwd-content {
-    background: url(../../../public/imagesWeb/what-we-do.jpg) no-repeat top center;
+    /* background: url(../imagesWeb/what-we-do.jpg) no-repeat top center; */
     background-size: 100% 100%;
 }
 .fs-24{
@@ -1605,7 +1610,7 @@ color:#fff;
     margin-bottom: 32px;
 }
 /* .newsletter{
-    background: url(../../../public/imagesWeb/MaskGroup.png) no-repeat top center #0E1E46;
+    background: url(../imagesWeb/MaskGroup.png) no-repeat top center #0E1E46;
     background-size: 100% 100%;
 } */
 .newsletter-form input[type="text"]{
@@ -1745,7 +1750,7 @@ color:#fff;
 /* end */
 /*File Name: platform.html*/
 /* .platform-main{
-    background: url(../../../public/imagesWeb/platform-banner.png) no-repeat top center;
+    background: url(../imagesWeb/platform-banner.png) no-repeat top center;
 } */
 .purple{
     color: #536681;
@@ -1913,8 +1918,8 @@ color:#fff;
     width: 60%;
 }
 /* .fundraising-main{
-    background: url(../../src/images/fundraising.png) no-repeat top center #0E1E46 !important;
-    background-size: 100% 100% !important;
+    background: url(../imagesWeb/fundraising.png) no-repeat top center #0E1E46 !important;
+    background-size: 100% 100%;
 } */
 .relative{
     position: relative;
@@ -1929,7 +1934,7 @@ color:#fff;
     border-radius: 30px;
     font-weight: bold;
     font-size: 14px;
-    background: #F94040;
+    background: #f96716;
     line-height: 22px;
     cursor: pointer;
 }
@@ -2044,11 +2049,11 @@ color:#fff;
     line-height: 22px;
     width: 100%;
 }
-.fancy-input select {
+/* .fancy-input select {
     -webkit-appearance: none;
-    background: url(../../src/images/down-arrow.png) no-repeat white;
+    background: url(../imagesWeb/down-arrow.png) no-repeat white;
     background-position: 93% 53%;
-}
+} */
 .fancy-input input:placeholder{
     color: #536681;
     font-weight: normal;
@@ -2126,7 +2131,7 @@ button.details-btn {
 .bar-progress::before {
     content: attr(data-percent);
     top: -27px;
-    right: 0px;
+    right: -35px;
     position: absolute;
     font-weight: bold;
     font-size: 16px;
@@ -2302,7 +2307,7 @@ button.details-btn {
     margin-left: -20px;
 }
 .background-slider{
-    /* background: url(../../../public/imagesWeb/slider-image.png) no-repeat top center; */
+    /* background: url(../imagesWeb/slider-image.png) no-repeat top center; */
     background-size: cover;
     height: 785px;
 }
@@ -2582,7 +2587,6 @@ button.details-btn {
 	background: #FFFFFF;
     border: 1px solid #FDFDFD;
     border-radius: 5px;
-    /* max-width: 385px; */
     width: 100%;
     height: 54px;
     text-indent: 21px;
@@ -2594,7 +2598,7 @@ button.details-btn {
 }
 .form-input select {
 	    -webkit-appearance: none;
-    /* background: url(../../../public/imagesWeb/down-blue.png) no-repeat; */
+    /* background: url(../imagesWeb/down-blue.png) no-repeat; */
     background-position: 95% 53%;
     width: 100%;
     height: 68px;
@@ -2773,4 +2777,22 @@ box-shadow: -1px 13px 20px #F0F2F4;
     line-height: 32px;
     color: #373F48;
     margin-top: 28px;
+}
+.hwd-image{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.aboutBtnTab{
+    padding-left: 200px;
+}
+
+.rating-stars .fa-star{
+	color: #EFCE4A;
+    font-size: 14px;
+	cursor:pointer;
+}
+.rat-opacity{
+	opacity:0.5;
 }

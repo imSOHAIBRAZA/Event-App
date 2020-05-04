@@ -5,10 +5,11 @@ import {
   BrowserRouter as Router, Route,
 } from 'react-router-dom';
 
-import Marketplace from './WebSite/containers/Marketplace/Marketplace';
-import EventDetail from './WebSite/containers/Marketplace/EventDetail';
-import ContactUs from './WebSite/components/ContactUs/ContactUs';
-import Home from './WebSite/containers/Home/Home';
+import Marketplace from './containers/Marketplace/Marketplace';
+import EventDetail from './containers/Marketplace/EventDetail';
+import ContactUs from './components/ContactUs/ContactUs';
+import Home from './containers/Home/Home';
+
 
 import createhistory from 'history/createBrowserHistory'
 const history = createhistory()
