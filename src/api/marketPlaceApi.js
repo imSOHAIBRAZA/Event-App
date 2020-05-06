@@ -10,8 +10,10 @@ class EventsApi {
    
 
     static getEventsByDate = async (startDate, endDate) => {
-        let start_data =moment(startDate).format("YYYY-MM-DD");
-        let end_data =moment(endDate).format("YYYY-MM-DD");
+        // let start_data =moment(startDate).format("YYYY-MM-DD");
+        // let end_data =moment(endDate).format("YYYY-MM-DD");
+        let start_data =moment().add(startDate,'days').format('YYYY-MM-DD');
+        let end_data =moment().add(endDate,'days').format('YYYY-MM-DD');
         // debugger;
         const ajaxRequestHeaders = new Headers({
             "Content-Type": "application/json",
@@ -49,6 +51,7 @@ class EventsApi {
 
 export default EventsApi;
 
+ 
 
 
 

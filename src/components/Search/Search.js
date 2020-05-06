@@ -19,13 +19,20 @@ const Search = props => {
   const [eventType, setEventType] = useState('');
   const [startDate, setStartDate] = useState(moment());
   const [endDate, setEndDate] = useState(moment().add('days', 6));
+
+  const [start_date, set_startdate] = useState(0);
+  const [end_date, set_enddate] = useState( 7);
+
   const [focusedInput, setFocusedInput] = useState(null);
   const [addrtype, setAddrtype] = useState([{name:"Football"}, {name:"Cricket"},{name:"BasketBall"},{name:"K1"},{name:"UFC"}])
 
   useEffect(() => {
 
-    dispatch(getAllPropertiesList(startDate, endDate));
-  }, [startDate,endDate]);
+    // dispatch(getAllPropertiesList(startDate, endDate));
+    dispatch(getAllPropertiesList(start_date, end_date));
+
+  }, [start_date,]
+  );
 
   // useEffect(()=>{
   //   dispatch(setTextFilter(addrtype));
@@ -41,11 +48,41 @@ const Search = props => {
     
 
   }
-  console.log('start',startDate._d);
-    console.log('date',endDate._d);
+ 
+
+  const increment = () => {
+    set_startdate(start_date + 7);
+    set_enddate(end_date + 7);
+
+  };
+  const decrement = () => {
+    set_startdate(start_date - 7);
+    set_enddate(end_date - 7);
+
+  };
+  // const decrement = () => {
+  //   set_enddate(end_date + 7);
+  // };
+
+ 
   return (
     <div className="filteration-type pt-40 pb-40">
-      <form>
+     
+      {/* <p>{  moment().add(start_date,'days').format('YYYY-MM-DD')}</p>
+
+      <p>{ moment().add(end_date,'days').format('YYYY-MM-DD')}</p>
+      <button onClick={()=>increment()}>{`>`}</button> */}
+
+{/* <ul >
+    <li > <button onClick={()=>decrement()}> {`<`}</button></li>
+
+    <li ><p>{`Games Between ${moment().add(start_date,'days').format('YYYY-MM-DD')} and ${ moment().add(end_date,'days').format('YYYY-MM-DD')}`}</p></li>
+   
+    <li ><button onClick={()=>increment()}>{`>`}</button></li>
+  </ul> */}
+  
+      
+      {/* <form onSubmit={(e)=>e.preventDefault}> */}
         <div className="clearfix">
            
           <div className=" float-left" style={{marginLeft:'30px'}}>
@@ -71,8 +108,8 @@ const Search = props => {
          
            
           </div>
-          <div className="text-center">
-                 <DateRangePicker
+          <div style={{margin: '0 30%'}}>
+                 {/* <DateRangePicker
                   startDate={startDate}
                   endDate={ moment(startDate, "DD-MM-YYYY").add('days', 6)}
                   startDateId={2}
@@ -88,10 +125,21 @@ const Search = props => {
                   // showClearDates={true}
                   numberOfMonths={1}
                   isOutsideRange={() => false}
-                        /> 
+                        />  */}
+
+                            
+   
+  <ul >
+    <li style={{display:'inline-block'}}> <button onClick={()=>decrement()} className="dateFilter"> {`<`}</button></li>
+
+    <li style={{display:'inline-block'}}><p>{`Games Between ${moment().add(start_date,'days').format('YYYY-MM-DD')} and ${ moment().add(end_date,'days').format('YYYY-MM-DD')}`}</p></li>
+   
+    <li style={{display:'inline-block'}}><button onClick={()=>increment()} className="dateFilter">{`>`}</button></li>
+  </ul>
+
            </div>
         </div>
-      </form>
+      {/* </form> */}
     </div>
   );
 };

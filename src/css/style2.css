@@ -2796,3 +2796,13 @@ box-shadow: -1px 13px 20px #F0F2F4;
 .rat-opacity{
 	opacity:0.5;
 }
+
+.dateFilter{
+    margin: 0px 15px;
+    height: 40px;
+    width: 40px;
+    background: #f96716;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}

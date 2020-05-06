@@ -9,6 +9,10 @@ import MarketplaceSearch from '../../components/Marketplace/MarketplaceSearch';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import logo from '../../images/logo.png'
+import axios from "axios";
+import { Base_Url } from '../../app.constant';
+
+
 
 
 // import "../../css/body.css";
@@ -23,8 +27,24 @@ const EventDetail = (props) => {
     
     dispatch(getPropertyDetail(props.match.params.id));
 
+const eventDetail = async () => {
+      // const TOKEN = getItem("accessToken");
+      const ajaxRequestHeaders = {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+      };
+      let response = await axios({
+          url: `${Base_Url}/eventscustomers/${props.match.params.id}`,
+          method: "PUT",
+          headers: ajaxRequestHeaders,
+          
+      });
+      return response;
+  }
   },[]);
  
+
+  
 
   return (
     <Fragment>
