@@ -38,13 +38,15 @@ const Search = props => {
     // let data = e.key
     // debugger;
     dispatch(setTextFilter(e));
+    
+
   }
+  console.log('start',startDate._d);
+    console.log('date',endDate._d);
   return (
     <div className="filteration-type pt-40 pb-40">
-      
       <form>
         <div className="clearfix">
-          
            
           <div className=" float-left" style={{marginLeft:'30px'}}>
           <Multiselect
@@ -66,6 +68,7 @@ const Search = props => {
               <option value=""  style={{fontSize: '20px'}}>Show All</option>
 
           </select > */}
+         
            
           </div>
           <div className="text-center">
