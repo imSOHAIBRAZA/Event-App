@@ -254,7 +254,7 @@ h1, h2, h3, h4, h5, h6 {
 .comment-bx {
     position: fixed;
     left: 2%;
-    bottom: 22%;
+    /* bottom: 22%; */
     width: 150px;
     height: 52px;
     /* border-radius: 50%; */
@@ -1940,7 +1940,7 @@ color:#fff;
 }
 .place-head{
     font-weight: bold;
-    font-size: 24px;
+    /* font-size: 24px; */
     line-height: 36px;
     color: #616161;
 }

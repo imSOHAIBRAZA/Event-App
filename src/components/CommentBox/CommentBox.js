@@ -13,7 +13,7 @@ const CommentBox = () => {
         <img
           src={downarrow}
           alt="comment"
-          style={{paddingLeft:'10px'}}
+          // style={{paddingLeft:'10px'}}
         />
         
       

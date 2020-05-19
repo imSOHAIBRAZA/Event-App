@@ -41,7 +41,7 @@ class PropertyGridItem extends Component {
 
                 <div className=" clearfix d-flex align-items-center">
                   <div className="float-left ">
-                    <h5 className="place-head m-0 ">{title}</h5>
+                    <h5 className="place-head m-0 ">{title&&title.slice(0,20)}</h5>
                   </div>
 
                 </div>
@@ -68,7 +68,7 @@ class PropertyGridItem extends Component {
                           {/* <strong>Description</strong> */}
                           </p><br/>
                         <p className="d-inline-block m-0 m-small">
-                          {description}
+                          {description&&description.slice(0,30)}
                         </p>
                       </div>
                     </div>

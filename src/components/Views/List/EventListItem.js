@@ -170,42 +170,17 @@ class EventListItem extends Component {
                       <path fill-rule="evenodd" d="M2.5 13.5A.5.5 0 013 13h10a.5.5 0 010 1H3a.5.5 0 01-.5-.5zM13.991 3H2c-.325 0-.502.078-.602.145a.758.758 0 00-.254.302A1.46 1.46 0 001 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 00.538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 00.254-.302 1.464 1.464 0 00.143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 00-.302-.254A1.46 1.46 0 0013.99 3zM14 2H2C0 2 0 4 0 4v6c0 2 2 2 2 2h12c2 0 2-2 2-2V4c0-2-2-2-2-2z" clip-rule="evenodd" />
                     </svg>
                       <strong>{nb_tvs}</strong></span>
-                    {/* <div className="">{address}</div> */}
-                    {/* <div className="">Hardcap</div> */}
+                     <div className="">No Smoke</div> 
+                    <div className="">No Alcohol</div> 
                   </div>
-                  <div className="user-bottom mt-2 mb-2">
-                    <div className="d-flex">
-                      {/* <div className="mr-2 position-relative">
-                      
-                          <img
-                            src={
-                              // manager_avatar
-                              process.env.PUBLIC_URL + 'images/owner-image.png'
-                            }
-                            alt="icon"
-                            style={{ borderRadius: '50%', height: '50px', width: '50px' }}
-                            className="w-30px"
-                          
-                          /> 
-                          <img
-                            src='imagesWeb/msg.png'
-                            alt="icon"
-                            className="lr-0 w-10px"
-                          />
-                        </div> */}
-                      {/* <div className="user-designation">
-                          <h3 className="m-0 fs-14 fw-bold mr-3">
-                          {'manager_name'}
-                          </h3>
-                          <span className="m-0 fs-12">Property Manager</span>
-                        </div> */}
-                    </div>
-                    {/* <div className="">
-                        <a href="#" className="see-details-btn btn">
-                          See Details
-                        </a>
-                      </div> */}
+
+                  <div className="bottm-txt border12 pb-2 fs-14">
+                    <div className=""> <i className="fa fa-share d-inline-block"></i>Share</div>
+                    <span><i className="fa fa-map-marker d-inline-block"></i>I am attending this</span>
+                     <div className=""><i className="fa fa-comment d-inline-block"></i>Report this place</div> 
+                    <div >Place Size: {place_size} </div> 
                   </div>
+                 
                 </div>
               </div>
             </div>

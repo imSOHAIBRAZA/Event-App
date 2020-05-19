@@ -2,6 +2,7 @@ import React, { useEffect, Fragment } from 'react';
 import HeaderMenu from '../Header/HeaderMenu'
 import List from '../Views/List/List.js';
 import addfvrt from '../../images/add-fvrt.png'
+import moment from 'moment';
 
 const MarketplaceSpecs = (props) => {
 
@@ -32,7 +33,7 @@ const MarketplaceSpecs = (props) => {
 											</div>
 											<div className="d-inline-block">
 												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
-												<span className="fs-14 gray6">{date}</span>
+												<span className="gray6" style={{position: 'absolute',right: '15px',top: '25px'}}>{moment(date).format('YYYY-MM-DD HH:MM')}</span>
 											</div>
 										</div>
 									</div>
@@ -152,7 +153,7 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 pr-0 large-padd-0" >
+						<div className="col-lg-3 pr-0 large-padd-0" style={{position: 'fixed',right:'0',background: 'white',zIndex: '1'}} >
 							<div>
 								<h5 style={{ background: '#ff6a00', borderRadius: '6px', color: 'white', marginRight: '10px', padding: '15px' }} >
 									Today's games

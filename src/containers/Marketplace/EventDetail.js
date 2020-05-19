@@ -24,7 +24,7 @@ const EventDetail = (props) => {
   const { PropertyDetail} = useSelector(({ marketPlaceReducer }) => ({PropertyDetail: marketPlaceReducer,}));
   
   useEffect(() => {
-    
+    window.scrollTo(0, 0);
     dispatch(getPropertyDetail(props.match.params.id));
 
 const eventDetail = async () => {
