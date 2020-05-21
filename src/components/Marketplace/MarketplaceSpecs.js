@@ -32,6 +32,9 @@ const MarketplaceSpecs = (props) => {
 											</div>
 											<div className="d-inline-block ">
 												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
+												
+											</div>
+											<div className="d-inline-block detailsDate ">
 												<span className="gray6 datestyle" >{moment(date).format('YYYY-MM-DD HH:MM')}</span>
 											</div>
 										</div>
@@ -44,7 +47,7 @@ const MarketplaceSpecs = (props) => {
 							<div className="row mb-3 eventDesc">
 								<div className="col-lg-9 pl-0 md-size-mb-16 md-size-p-0">
 									<div className="border-arround4 white p-4 h-100">
-										<div className="mb-3 pl-3 ">
+										<div className="mb-3 pl-3 eventsDec">
 											<h3 className="fw-bold fs-24 m-0">Event Description</h3>
 										</div>
 										<div className="row">
@@ -68,7 +71,7 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 
-							<div className="text-left" style={{ padding: '30px', marginTop: '20px', backgroundColor: '#FF5722' }}>
+							<div className="text-left searchPlace" >
 
 								<div className="clearfix">
 									<div className="fancy-input float-left w-25 position-relative">

@@ -2293,6 +2293,11 @@ button.details-btn {
 .fundraising .bar-progress::before{
     color: #3274ED;
 }
+.searchPlace{
+    padding: 30px;
+     margin-top: 20px;
+     background-color:#FF5722;
+}
 .w-40{
     width: 40%;
 }
@@ -2862,6 +2867,14 @@ box-shadow: -1px 13px 20px #F0F2F4;
     bottom:20% !important;
     
 }
+.footer-bottom {
+    flex-direction: column;
+    padding-bottom: 20px !important;
+}
+.footer-bottom-icon{
+    margin-top: 5px !important;
+}
+
 .sectiontitle{
 font-size: 25px !important;
 margin-bottom: 0px !important;
@@ -2880,6 +2893,9 @@ margin-bottom: 0px !important;
 }
 .textBoxcenter{
     display: inline-flex;
+}
+.searchPlace{
+    padding: 15px;
 }
 footer{
     display:none !important;
@@ -2908,9 +2924,23 @@ footer{
 .columnDetails{
     width: 50%;
 }
-.eventDesc{
-    display: none !important;
+.detailsDate{
+    padding-left: 40px;
 }
+
+.benefits ul li {
+    padding-bottom: 0px !important;
+}
+
+.eventsDec{
+    margin-bottom:0px !important;
+}
+.border-arround2{
+    display: none;
+}
+/* .eventDesc{
+    display: none !important;
+} */
 /* .border-arround4{
     display: none;
 }
