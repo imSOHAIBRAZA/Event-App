@@ -71,18 +71,18 @@ const Search = props => {
         <div style={{ textAlign: 'center' }}>
 
           <ul >
-            <li style={{ display: 'inline-block' }}> <button onClick={() => decrement()} className="dateFilter"> {`<`}</button></li>
+            <li className="inlineBlock"> <button onClick={() => decrement()} className="dateFilter"> {`<`}</button></li>
 
-            <li style={{ display: 'inline-block' }}><p>{`Games Between ${moment().add(start_date, 'days').format('YYYY-MM-DD')} and ${moment().add(end_date, 'days').format('YYYY-MM-DD')}`}</p></li>
+            <li className="inlineBlock"><p className="dateTitle">{`Games Between ${moment().add(start_date, 'days').format('YYYY-MM-DD')} and ${moment().add(end_date, 'days').format('YYYY-MM-DD')}`}</p></li>
 
-            <li style={{ display: 'inline-block' }}><button onClick={() => increment()} className="dateFilter">{`>`}</button></li>
+            <li className="inlineBlock"><button onClick={() => increment()} className="dateFilter">{`>`}</button></li>
           </ul>
 
         </div>
       </div>
 
-      <div className="col-md-12">
-        <div className="clearfix">
+      <div className="col-md-12 textBoxContainer">
+        <div className="clearfix textBoxcenter">
 
           <div className=" float-left" style={{ marginLeft: '5%' }}>
             <Multiselect

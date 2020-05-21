@@ -39,9 +39,9 @@ class PropertyGridItem extends Component {
               </div>
               <div className="photo-description image-content" >
 
-                <div className=" clearfix d-flex align-items-center">
+                <div className=" clearfix d-flex " style={{ height: '75px'}}>
                   <div className="float-left ">
-                    <h5 className="place-head m-0 ">{title&&title.slice(0,20)}</h5>
+                    <h5 className="place-head m-0 ">{title&&title}</h5>
                   </div>
 
                 </div>

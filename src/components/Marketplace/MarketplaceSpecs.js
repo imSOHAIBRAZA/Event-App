@@ -21,7 +21,7 @@ const MarketplaceSpecs = (props) => {
 		<div className="col-lg-12 p-0">
 			<div className="light-gray-back pb-120">
 				<div className="custom-container">
-					<div className="row pt-5">
+					<div className="row pt-5" style={{ position: 'sticky',top: '0px'}}>
 						<div className="col-lg-9 pr-0 large-padd-0">
 
 							<div className="row row-eq-height mb-3">
@@ -153,7 +153,7 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 pr-0 large-padd-0" style={{position: 'fixed',right:'0',background: 'white',zIndex: '1'}} >
+						<div className="col-lg-3 pr-0 large-padd-0"  >
 							<div>
 								<h5 style={{ background: '#ff6a00', borderRadius: '6px', color: 'white', marginRight: '10px', padding: '15px' }} >
 									Today's games

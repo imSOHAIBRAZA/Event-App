@@ -235,6 +235,7 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 24px;
 	color: #FFFFFF;
 	margin-bottom:0;
+    text-align: justify;
 }
 .read-btn {
     width: 188px;
@@ -2806,3 +2807,45 @@ box-shadow: -1px 13px 20px #F0F2F4;
     border: none;
     border-radius: 50%;
 }
+
+.margin-right{
+    margin-right:5px
+}
+.inlineBlock{
+    display: inline-block
+}
+
+@media  (max-width:526px){
+	.header-txt h2{
+	font-size: 40px !important;
+}
+
+.header-txt {
+    padding: 0px 15px 30px !important;
+}
+
+.comment-bx{
+display:none !important;
+}
+.inlineBlock{
+    display: block
+}
+.dateTitle{
+    margin:0px
+}
+.textBoxContainer{
+    text-align:center;
+}
+.textBoxcenter{
+    display: inline-flex;
+}
+footer{
+    display:none !important;
+}
+.footer-bottom-bg{
+    margin-top:20px
+}
+
+}
+
+
