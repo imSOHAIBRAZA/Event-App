@@ -87,7 +87,7 @@ class EventListItem extends Component {
                  
                   <div className="detailAddress">{address}</div>
 
-                  <div className="pt-3">
+                  <div style={{padding: '10px 0px'}} >
                     <div className="clearfix">
                       
                       <div className="bars">
