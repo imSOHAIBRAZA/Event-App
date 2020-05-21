@@ -42,7 +42,7 @@ const Search = props => {
   };
 
   return (
-    <div className="conatiner pt-40 pb-40">
+    <div className="conatiner pt-40 pb-40 dateSearch">
       <div className="">
         <div style={{ textAlign: 'center' }}>
 

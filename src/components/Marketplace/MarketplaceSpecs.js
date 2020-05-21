@@ -41,10 +41,10 @@ const MarketplaceSpecs = (props) => {
 							</div>
 
 
-							<div className="row mb-3">
+							<div className="row mb-3 eventDesc">
 								<div className="col-lg-9 pl-0 md-size-mb-16 md-size-p-0">
 									<div className="border-arround4 white p-4 h-100">
-										<div className="mb-3 pl-3">
+										<div className="mb-3 pl-3 ">
 											<h3 className="fw-bold fs-24 m-0">Event Description</h3>
 										</div>
 										<div className="row">
