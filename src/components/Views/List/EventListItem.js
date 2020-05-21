@@ -24,7 +24,7 @@ class EventListItem extends Component {
 
   render() {
     const { broadcasting_date, client } = this.props.PropertyItem
-    const { address, city_client, country_client, email, id, is_without_sound, logo, name, nb_tvs, photos, place_size, position_gps, type } = client
+    const { address, city_client, id, is_without_sound, logo, name, nb_tvs, photos, place_size, type } = client
     const { name: names } = city_client
     return (
       <>

@@ -1,8 +1,6 @@
-import React, { useState, useEffect, Fragment } from "react";
-import { DateRangePicker } from 'react-dates';
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect} from "react";
+import { useDispatch } from "react-redux";
 import { Multiselect } from 'multiselect-react-dropdown';
-import { Form } from 'react-bootstrap';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -16,14 +14,8 @@ import { setTextFilter } from "../../actions/filters";
 const Search = props => {
   const dispatch = useDispatch();
 
-  const [eventType, setEventType] = useState('');
-  const [startDate, setStartDate] = useState(moment());
-  const [endDate, setEndDate] = useState(moment().add('days', 6));
-
   const [start_date, set_startdate] = useState(0);
   const [end_date, set_enddate] = useState(7);
-
-  const [focusedInput, setFocusedInput] = useState(null);
   const [addrtype, setAddrtype] = useState([{ name: "Football" }, { name: "Cricket" }, { name: "BasketBall" }, { name: "K1" }, { name: "UFC" }])
 
   useEffect(() => {
@@ -31,7 +23,6 @@ const Search = props => {
 
   }, [start_date,]
   );
-  const Add = addrtype.map(Add => Add)
   const handleAddrTypeChange = (e) => {
     dispatch(setTextFilter(e));
 
@@ -49,10 +40,6 @@ const Search = props => {
     set_enddate(end_date - 7);
 
   };
-  // const decrement = () => {
-  //   set_enddate(end_date + 7);
-  // };
-
 
   return (
     <div className="conatiner pt-40 pb-40">

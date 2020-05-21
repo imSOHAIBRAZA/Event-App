@@ -31,7 +31,7 @@ const Footer = () => {
             <h3>About</h3>
             <ul>
               <li>
-                <a href="">
+                <a href="#">
                   About Us
                 </a>
               </li>

@@ -32,7 +32,7 @@ const MarketplaceSpecs = (props) => {
 											</div>
 											<div className="d-inline-block ">
 												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
-												<span className="gray6" className="datestyle">{moment(date).format('YYYY-MM-DD HH:MM')}</span>
+												<span className="gray6 datestyle" >{moment(date).format('YYYY-MM-DD HH:MM')}</span>
 											</div>
 										</div>
 									</div>
@@ -62,7 +62,7 @@ const MarketplaceSpecs = (props) => {
 
 								<div className="col-lg-3 p-0">
 									<div className="border-arround h-100">
-										<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery image" style={{ height: 'inherit' }} className=" w-100" />
+										<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" />
 
 									</div>
 								</div>

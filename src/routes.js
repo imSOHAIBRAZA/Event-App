@@ -4,10 +4,13 @@ import './App.css';
 import {
   BrowserRouter as Router, Route,
 } from 'react-router-dom';
-
+import "./css/style2.css";
+import "./css/body.css";
+import "./css/responsive.css";
+import "./css/style.css";
+import "./css/style1.css";
 import Marketplace from './containers/Marketplace/Marketplace';
 import EventDetail from './containers/Marketplace/EventDetail';
-import Home from './containers/Home/Home';
 
 
 import createhistory from 'history/createBrowserHistory'
