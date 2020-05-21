@@ -21,7 +21,7 @@ const MarketplaceSpecs = (props) => {
 		<div className="col-lg-12 p-0">
 			<div className="light-gray-back pb-120">
 				<div className="custom-container">
-					<div className="row pt-5" style={{ position: 'sticky',top: '0px'}}>
+					<div className="row pt-5 sticky" >
 						<div className="col-lg-9 pr-0 large-padd-0">
 
 							<div className="row row-eq-height mb-3">
@@ -31,9 +31,9 @@ const MarketplaceSpecs = (props) => {
 											<div className="d-inline-block">
 												<img src={addfvrt} alt="favorite" />
 											</div>
-											<div className="d-inline-block">
+											<div className="d-inline-block ">
 												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
-												<span className="gray6" style={{position: 'absolute',right: '15px',top: '25px'}}>{moment(date).format('YYYY-MM-DD HH:MM')}</span>
+												<span className="gray6" className="datestyle">{moment(date).format('YYYY-MM-DD HH:MM')}</span>
 											</div>
 										</div>
 									</div>
@@ -128,7 +128,7 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div> */}
 							<div className="row">
-								<div className="col-lg-12 p-0 md-size-mb-16">
+								<div className="col-md-12 col-lg-12 p-0 md-size-mb-16">
 									<div className="border-arround2 p-4">
 										{/* <div className="clearfix d-flex block-d align-items-center social-block">
 											<div className="float-left w-30">
@@ -153,9 +153,9 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 						</div>
-						<div className="col-lg-3 pr-0 large-padd-0"  >
+						<div className="col-lg-3 pr-0 large-padd-0 todaygameList"  >
 							<div>
-								<h5 style={{ background: '#ff6a00', borderRadius: '6px', color: 'white', marginRight: '10px', padding: '15px' }} >
+								<h5 className="gamesTitle" >
 									Today's games
 								</h5>
 							</div>

@@ -49,7 +49,7 @@ const eventDetail = async () => {
   return (
     <Fragment>
       <div className="container-fluid">
-      <div className="head-main-menu" style={{margin:'40px 40px'}}>
+      <div className="head-main-menu" >
       <div className="comp-logo">
         <img src={logo} alt="logo" style={{width: '200px'}} /><br/>
         <span >

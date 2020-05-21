@@ -2064,8 +2064,9 @@ button.btn-search {
     color: #536681;
 }
 .fancy-input {
-    width: 11%;
+    /* width: 11%; */
     margin-left: 7px;
+    width: 212px !important;
 }
 .h-242{
     height: 242px;
