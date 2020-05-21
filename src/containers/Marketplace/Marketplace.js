@@ -1,6 +1,5 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, {Fragment } from "react";
 import Header from "../../components/Header/Header";
-
 import PropertyListView from "../../components/PropertyListView/";
 import Contact from "../../components/Contact/contact";
 import Footer from "../../components/Footer/Footer";
@@ -8,10 +7,7 @@ import Search from "../../components/Search/Search"
 import FooterBottom from "../../components/Footer/FooterBottom";
 import webbanner from "../../images/webbanner.png"
 
-const Marketplace = (props) => {
-
-
- 
+const Marketplace = () => {
 
   return (
     <Fragment>
@@ -21,11 +17,8 @@ const Marketplace = (props) => {
         content="Our managed cloud hosting platform takes away all the technical complexities, letting you focus on the growth and success of your website with complete peace of mind."
       />
       <Contact />
-      <Search/>
+      <Search />
       <PropertyListView />
-      {/* <Fundraising /> */}
-      {/* <Testimonials /> */}
-      {/* <Newsletter /> */}
       <Footer />
       <FooterBottom />
     </Fragment>

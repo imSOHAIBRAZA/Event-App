@@ -7,7 +7,7 @@ import { Form } from 'react-bootstrap';
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 import moment from 'moment';
-import { getAllPropertiesList } from "../../actions/marketPlaceAction";
+import { getAllPropertiesList } from "../../actions/eventsAction";
 import { setTextFilter } from "../../actions/filters";
 
 
@@ -27,23 +27,12 @@ const Search = props => {
   const [addrtype, setAddrtype] = useState([{ name: "Football" }, { name: "Cricket" }, { name: "BasketBall" }, { name: "K1" }, { name: "UFC" }])
 
   useEffect(() => {
-
-    // dispatch(getAllPropertiesList(startDate, endDate));
     dispatch(getAllPropertiesList(start_date, end_date));
 
   }, [start_date,]
   );
-
-  // useEffect(()=>{
-  //   dispatch(setTextFilter(addrtype));
-
-  // },[addrtype])
-
-
   const Add = addrtype.map(Add => Add)
   const handleAddrTypeChange = (e) => {
-    // let data = e.key
-    // debugger;
     dispatch(setTextFilter(e));
 
 

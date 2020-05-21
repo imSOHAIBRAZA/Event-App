@@ -7,7 +7,6 @@ import {
 
 import Marketplace from './containers/Marketplace/Marketplace';
 import EventDetail from './containers/Marketplace/EventDetail';
-import ContactUs from './components/ContactUs/ContactUs';
 import Home from './containers/Home/Home';
 
 

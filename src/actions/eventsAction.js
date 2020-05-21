@@ -1,5 +1,4 @@
-// import * as types from "./actionTypes";
-import EventsApi from "../api/marketPlaceApi";
+import EventsApi from "../api/EventsApi";
 
 
 
@@ -9,7 +8,7 @@ export function getLodding() {
     };
 }
 
-export function getAllPropertyList(data) {
+export function getAllEventList(data) {
     return {
         type: 'GET_PROPERTY_SUCCESS',
         data
@@ -21,21 +20,16 @@ export function getAllPropertiesList(startData, endDate) {
     return async function (dispatch) {
 
         dispatch(getLodding());
-
-        
-            // let data = await marketPlaceApi.getAllProperties(limit, skip);
-            // dispatch(getAllPropertyList(data));
             EventsApi.getEventsByDate(startData, endDate)
             .then(
-                ({data})=> dispatch(getAllPropertyList(data))
+                ({data})=> dispatch(getAllEventList(data))
             )
             .catch (err=> console.error("ERROR=>", err)) 
-
-    };
+ };
 } 
 
 
-export function getPropertyDetailList(data) {
+export function getEventDetailList(data) {
     return {
         type: 'GET_PROPERTY_DETAIL_SUCCESS',
         data
@@ -48,7 +42,7 @@ export function getPropertyDetail(id) {
         dispatch(getLodding());
         EventsApi.eventDetail(id)
             .then(
-                ({data})=> dispatch(getPropertyDetailList(data))
+                ({data})=> dispatch(getEventDetailList(data))
             )
         .catch (err=> console.error("ERROR=>", err)) 
 

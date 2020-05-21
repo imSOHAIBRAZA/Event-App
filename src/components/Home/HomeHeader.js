@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import HeaderTop from '../Header/HeaderTop';
 import HeaderMenu from '../Header/HeaderMenu';
 
 class HomeHeader extends Component {
   render() {
     return (
       <header>
-        <HeaderTop />
 
         <div className="row">
           <div

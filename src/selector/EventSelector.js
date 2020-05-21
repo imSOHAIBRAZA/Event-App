@@ -17,11 +17,3 @@ const eventSelector = (event, text='') => {
 }
 
 export default eventSelector;
-// let data = []
-
-// for(let i = 0; i <= 10; i++) {
-//     data.push({
-//         startTime: new Date(),
-//         endTime: new  Date(new Date().setDay(new Date().))
-//     })
-// }

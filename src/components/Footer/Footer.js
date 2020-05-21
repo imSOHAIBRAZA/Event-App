@@ -10,7 +10,7 @@ const Footer = () => {
               <img
                 src={logo}
                 alt="logo"
-                style={{width: '200px'}}
+                style={{ width: '200px' }}
               />
 
             </div>
@@ -54,9 +54,6 @@ const Footer = () => {
               <li>
                 <a href="#">Event</a>
               </li>
-              {/* <li>
-                <a href="#">Investors</a>
-              </li> */}
             </ul>
           </div>
           <div className="col-md-2 footer-info">
