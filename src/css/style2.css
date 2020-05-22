@@ -2302,9 +2302,10 @@ button.details-btn {
     color: #3274ED;
 }
 .searchPlace{
-    padding: 15px 20px 16px;
+    /* padding: 15px 20px 16px;
      margin-top: 20px;
-     background-color:#FF5722;
+     background-color:#FF5722; */
+     display: none;
 }
 .w-40{
     width: 40%;
@@ -2881,7 +2882,11 @@ box-shadow: -1px 13px 20px #F0F2F4;
 	font-size: 30px !important;
 }
 .eventBack{
-    top:45px
+    /* top:45px */
+    display:none
+}
+.head-main-menu{
+    margin-bottom: -20px !important;
 }
 .sticky{
     padding-top: 0px !important;
@@ -2906,7 +2911,7 @@ box-shadow: -1px 13px 20px #F0F2F4;
     
 }
 .headerHight{
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .footer-bottom {
     flex-direction: column;
