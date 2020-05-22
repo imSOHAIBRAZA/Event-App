@@ -42,7 +42,7 @@ const EventDetail = (props) => {
           <div className="comp-logo">
             <img src={logo} alt="logo" style={{ width: '200px' }} /><br />
             <span >
-              <Link to="/" style={{ color: 'rgb(255, 255, 255)', background: '#ff6a00', marginTop: '35px', padding: '13px', borderRadius: '9px', position: 'absolute', top: '80px' }}> Back to Events</Link>
+              <Link to="/" className="eventBack"> Back to Events</Link>
             </span>
           </div>
           <div className="main-menu" id="header-toggle" style={{ marginBottom: '25px' }}>

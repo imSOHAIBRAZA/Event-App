@@ -57,10 +57,10 @@ const Search = props => {
         </div>
       </div>
 
-      <div className="col-md-12 textBoxContainer">
+      <div className=" col-xs-3 col-xs-3 col-md-3 textBoxContainer">
         <div className="clearfix textBoxcenter">
 
-          <div className=" float-left" style={{ marginLeft: '5%' }}>
+          <div className=" float-left" style={{ marginLeft: '17%' }}>
             <Multiselect
               options={addrtype}
               placeholder="Select Event Type"

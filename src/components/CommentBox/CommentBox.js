@@ -7,10 +7,11 @@ const CommentBox = () => {
       < a href="#event">
         <div className="comment-bx text-center">
           <span >See Events</span>
-          <img
+          <i class="fa fa-arrow-down" aria-hidden="true" style={{fontSize: '17px',padding: '3px 5px 0px 5px'}}></i>
+          {/* <img
             src={downarrow}
             alt="comment"
-          />
+          /> */}
         </div>
       </a>
     </div>

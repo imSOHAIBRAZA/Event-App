@@ -23,15 +23,15 @@ const MarketplaceSpecs = (props) => {
 					<div className="row pt-5 sticky" >
 						<div className="col-lg-9 pr-0 large-padd-0">
 
-							<div className="row row-eq-height mb-3">
+							<div className="row row-eq-height mb-3 marginB">
 								<div className="col-lg-12 pl-0 padding-right-zero" style={{ paddingRight: '0px' }}>
-									<div className="border-arround3 p-3 h-100">
+									<div className=" p-3 border-arround3  h-100">
 										<div className="">
 											<div className="d-inline-block">
 												<img src={addfvrt} alt="favorite" />
 											</div>
 											<div className="d-inline-block ">
-												<span className="fs-24 fw-bold m-0 color-blue pr-2"> {title} </span>
+												<span className="fs-24 fw-bold m-0 titleStyle color-blue pr-2"> {title} </span>
 												
 											</div>
 											<div className="d-inline-block detailsDate ">
@@ -44,11 +44,11 @@ const MarketplaceSpecs = (props) => {
 							</div>
 
 
-							<div className="row mb-3 eventDesc">
+							<div className="row mb-3 eventDesc marginB">
 								<div className="col-lg-9 pl-0 md-size-mb-16 md-size-p-0">
 									<div className="border-arround4 white p-4 h-100">
-										<div className="mb-3 pl-3 eventsDec">
-											<h3 className="fw-bold fs-24 m-0">Event Description</h3>
+										<div className="mb-3 pl-3 eventsDec marginB">
+											<h3 className="fw-bold fs-24 m-0 marginB">Event Description</h3>
 										</div>
 										<div className="row">
 											<div className="col-lg-5">
@@ -63,7 +63,7 @@ const MarketplaceSpecs = (props) => {
 									</div>
 								</div>
 
-								<div className="col-lg-3 p-0">
+								<div className="col-lg-3 p-0 imag">
 									<div className="border-arround h-100">
 										<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" />
 
@@ -85,7 +85,7 @@ const MarketplaceSpecs = (props) => {
 								</div>
 							</div>
 
-							<div className="row">
+							<div className="row bor">
 								<div className="col-md-12 col-lg-12 p-0 md-size-mb-16">
 									<div className="border-arround2 p-4">
 

@@ -7,10 +7,10 @@ const Header = props => {
     <header>
       <div className="row innerpage">
         <div
-          className="header-section header-bg"
+          className="header-section header-bg headerHight"
           style={{
             backgroundImage: `url(${props.image})`,
-            minHeight: '100vh',
+            
           }}
         >
           <div className="custom-container">
