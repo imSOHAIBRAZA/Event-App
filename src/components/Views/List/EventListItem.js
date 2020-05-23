@@ -62,14 +62,14 @@ class EventListItem extends Component {
                   </div>
                 </div>
 
-                <div className="col-sm-12 col-md-12 col-lg-7" style={{ margin: '24px 0px 0px'}}>
+                <div className="col-sm-12 col-md-12 col-lg-7 cardDetails" >
                   <div className="porfolio-item-details1">
                     <div className="porfolio-item-details-top">
                       <div className="item-details-left">
-                        <h3 className="fs-24 m-0">{`${name} `} <span style={{ color: '#FF5722', fontSize: '16px' }}>{`(${type})`}</span></h3>
+                        <h3 className="fs-24 m-0 barTitle">{`${name} `} <span style={{ color: '#FF5722', fontSize: '16px' }}>{`(${type})`}</span></h3>
                         <div className="light-gray">
                           <i className="fa fa-map-marker d-inline-block margin-right"></i>
-                          <p className="m-0 d-inline-block fs-16">{names}</p>
+                          <p className="m-0 d-inline-block fs-16 detailAddress">{names}</p>
                         </div>
                       </div>
                       <div className="item-details-right">
