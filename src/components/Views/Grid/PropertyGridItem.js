@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import eventpic from '../../../images/event.png';
 
 class PropertyGridItem extends Component {
 
@@ -19,16 +20,15 @@ class PropertyGridItem extends Component {
 
 
               <div className="relative image-content">
-                {thumbnail.length > 0 ?
+                {thumbnail  ?
                   <img
                     src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`}
                     // src={property_image[0]}
                     alt="icon"
                     className="w-100 h-242"
                   /> :
-
                   <img
-                    src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`}
+                    src={`${eventpic}`}
 
                     alt="icon"
                     className="w-100 h-242"

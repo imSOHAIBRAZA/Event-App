@@ -40,7 +40,9 @@ const EventDetail = (props) => {
       <div className="container-fluid">
         <div className="head-main-menu" >
           <div className="comp-logo">
+          <Link to="/" > 
             <img src={logo} alt="logo" style={{ width: '200px' }} /><br />
+            </Link>
             <span >
               <Link to="/" className="eventBack"> Back to Events</Link>
             </span>
