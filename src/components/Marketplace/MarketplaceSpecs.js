@@ -2,6 +2,8 @@ import React from 'react';
 import List from '../Views/List/List.js';
 import addfvrt from '../../images/add-fvrt.png'
 import moment from 'moment';
+import eventpic from '../../images/event.png';
+
 
 const MarketplaceSpecs = (props) => {
 
@@ -66,8 +68,13 @@ const MarketplaceSpecs = (props) => {
 
 								<div className="col-lg-3 p-0 imag">
 									<div className="border-arround h-100">
-										<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" />
+										
 
+										{thumbnail  ?
+                 <img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" /> :
+                  <img src={`${eventpic}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100"
+                  />
+                }
 									</div>
 								</div>
 							</div>
