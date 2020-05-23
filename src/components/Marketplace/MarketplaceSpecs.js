@@ -16,9 +16,6 @@ const MarketplaceSpecs = (props) => {
 
 	return (
 
-
-
-
 		<div className="col-lg-12 p-0">
 			<div className="light-gray-back pb-120">
 				<div className="custom-container">
@@ -32,12 +29,12 @@ const MarketplaceSpecs = (props) => {
 											<div className="d-inline-block">
 												<img src={addfvrt} alt="favorite" />
 											</div>
-											<div className="d-inline-block " style={{marginLeft:"10px"}}>
+											<div className="d-inline-block " style={{ marginLeft: "10px" }}>
 												<span className="fw-bold m-0 titleStyle color-blue pr-2" > {title} </span>
-												
+
 											</div>
-											<br/>
-											<div className="d-inline-block detailsDate " style={{marginLeft:"10px"}}>
+											<br />
+											<div className="d-inline-block detailsDate " style={{ marginLeft: "10px" }}>
 												<span className="gray6 datestyle" >{moment(date).format('YYYY-MM-DD HH:MM')}</span>
 											</div>
 										</div>
@@ -54,12 +51,12 @@ const MarketplaceSpecs = (props) => {
 											<h3 className="fw-bold fs-24 m-0 marginB ed">Event Description</h3>
 										</div>
 										{/* <div className="row"> */}
-											<div className="col-lg-5">
-												<div className="benefits">
-													<ul className="descr">
-														<li>{description}</li>
-													</ul>
-												</div>
+										<div className="col-lg-5">
+											<div className="benefits">
+												<ul className="descr">
+													<li>{description}</li>
+												</ul>
+											</div>
 											{/* </div> */}
 
 										</div>
@@ -68,13 +65,13 @@ const MarketplaceSpecs = (props) => {
 
 								<div className="col-lg-3 p-0 imag">
 									<div className="border-arround h-100">
-										
 
-										{thumbnail  ?
-                 <img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" /> :
-                  <img src={`${eventpic}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100"
-                  />
-                }
+
+										{thumbnail ?
+											<img src={`https://havenadmin.adilhaddaoui.com/back/public/uploads/events/${thumbnail}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100" /> :
+											<img src={`${eventpic}`} alt="gallery" style={{ height: 'inherit' }} className=" w-100"
+											/>
+										}
 									</div>
 								</div>
 							</div>

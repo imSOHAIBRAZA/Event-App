@@ -38,7 +38,7 @@ const EventDetail = (props) => {
   return (
     <Fragment>
       <div className="container-fluid">
-        <div className="head-main-menu" >
+        <div className="head-main-menu-detail" >
           <div className="comp-logo">
           <Link to="/" > 
             <img src={logo} alt="logo" style={{ width: '200px' }} /><br />

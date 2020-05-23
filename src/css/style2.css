@@ -142,7 +142,16 @@ h1, h2, h3, h4, h5, h6 {
 	align-items:center;
 	margin-top:36px;
 	padding: 0px 12px;
-    margin:40px 40px
+    margin:40px 40px 40px 5px;
+}
+
+.head-main-menu-detail{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	margin-top:36px;
+	padding: 0px 12px;
+    margin:40px 40px;
 }
 
 .header-section .main-menu ul{
@@ -2896,7 +2905,7 @@ box-shadow: -1px 13px 20px #F0F2F4;
     /* top:45px */
     display:none
 }
-.head-main-menu{
+.head-main-menu-detail{
     margin-bottom: -20px !important;
     margin-top: 10px !important;
     margin-left: -10px !important;
@@ -2964,7 +2973,7 @@ footer{
 }
 
 .head-main-menu{
-    margin:40px 20px
+    margin:40px 20px ;
 }
 
 .datestyle{
