@@ -31,7 +31,7 @@ const MarketplaceSpecs = (props) => {
 												<img src={addfvrt} alt="favorite" />
 											</div>
 											<div className="d-inline-block ">
-												<span className="fs-24 fw-bold m-0 titleStyle color-blue pr-2"> {title} </span>
+												<span className="fw-bold m-0 titleStyle color-blue pr-2"> {title} </span>
 												
 											</div>
 											<div className="d-inline-block detailsDate ">
@@ -45,19 +45,19 @@ const MarketplaceSpecs = (props) => {
 
 
 							<div className="row mb-3 eventDesc marginB">
-								<div className="col-lg-9 pl-0 md-size-mb-16 md-size-p-0">
-									<div className="border-arround4 white p-4 h-100">
+								<div className="col-lg-9 pl-0  md-size-p-0 cont">
+									<div className=" white  h-100 border-arround4">
 										<div className="mb-3 pl-3 eventsDec marginB">
 											<h3 className="fw-bold fs-24 m-0 marginB">Event Description</h3>
 										</div>
-										<div className="row">
+										{/* <div className="row"> */}
 											<div className="col-lg-5">
 												<div className="benefits">
-													<ul>
+													<ul className="descr">
 														<li>{description}</li>
 													</ul>
 												</div>
-											</div>
+											{/* </div> */}
 
 										</div>
 									</div>

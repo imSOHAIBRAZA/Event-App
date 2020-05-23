@@ -2860,6 +2860,9 @@ box-shadow: -1px 13px 20px #F0F2F4;
     position: absolute !important;
     top: 12px !important;
     left: 61px !important;
+    font-weight: normal !important;
+    font-size: 24px !important;
+    line-height: 36px !important;
 }
 
 .sticky{
@@ -2880,6 +2883,10 @@ box-shadow: -1px 13px 20px #F0F2F4;
 @media  (max-width:526px){
 	.header-txt h2{
 	font-size: 30px !important;
+}
+
+.titlestyle{
+    font-size: 12px !important;
 }
 .eventBack{
     /* top:45px */
@@ -2985,14 +2992,12 @@ footer{
     display: none;
 }
 .eventDesc{
-    height:120px;
+    height:auto !important;
 }
 .bor{
     display: none;
 }
-/* .border-arround4{
-    padding: 5px !important;
-} */
+
 /* .border-arround{display: none;}  */
 
 .dateTitle{
@@ -3020,5 +3025,26 @@ footer{
 .imag{
     display: none;
 }
+.border-arround4{
+    padding: 5px 5px 0px 5px !important;
+}
+.custom-container{
+    padding: 0 1rem !important;
+}
+.border-arround3{
+    padding-top: 6px !important;
+    padding-bottom: 3px !important;
+}
+.h-100 {
+    height: auto !important;
+}
+.descr{
+    margin-bottom: 0px;
+}
+.cont{
+    padding-bottom: 0px !important;
+    margin-bottom: 0px !important;
+}
+
 }
 
