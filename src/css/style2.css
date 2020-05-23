@@ -2894,6 +2894,7 @@ box-shadow: -1px 13px 20px #F0F2F4;
 }
 .head-main-menu{
     margin-bottom: -20px !important;
+    margin-top: 10px !important;
 }
 .sticky{
     padding-top: 0px !important;
@@ -3044,6 +3045,9 @@ footer{
 .cont{
     padding-bottom: 0px !important;
     margin-bottom: 0px !important;
+}
+.footer-bottom-bg {
+    padding: 8px;
 }
 
 }
